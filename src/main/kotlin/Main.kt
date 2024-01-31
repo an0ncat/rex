@@ -3,8 +3,8 @@ package rex
 import rex.base.*
 
 fun main() {
-    val a = variable("a", 0.0)
-    val b = variable("b", 0.0)
+    val a = "a" by 0
+    val b = "b" by 0
     val lhs = (a + b).pow(2)
     val rhs = a.pow(2) + 2*a*b + b.pow(2)
     println("--- Initial state of expression trees $lhs and $rhs ---")

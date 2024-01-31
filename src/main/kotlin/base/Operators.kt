@@ -47,3 +47,5 @@ fun Expression.pow(other: Expression): Expression = Power(this, other)
 fun Expression.pow(other: Number): Expression = Power(this, ConstantExpression(other.toDouble()))
 
 fun Number.pow(other: Expression): Expression = Power(ConstantExpression(toDouble()), other)
+
+infix fun String.by(value: Number) = VariableExpression(this, value.toDouble())
