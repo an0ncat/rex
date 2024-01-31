@@ -3,10 +3,10 @@ package rex
 import rex.base.*
 
 fun main() {
-    val a = variable("a", 0.0)
-    val b = variable("b", 0.0)
-    val lhs = pow(add(a, b), 2.0)
-    val rhs = add(add(pow(a, 2.0), multiply(multiply(a, b), 2.0)), pow(b, 2.0))
+    val a = "a" by 0
+    val b = "b" by 0
+    val lhs = (a + b).pow(2)
+    val rhs = a.pow(2) + 2*a*b + b.pow(2)
     println("--- Initial state of expression trees $lhs and $rhs ---")
     println("Evaluate lhs: $lhs = ${lhs.evaluate()}")
     println("Evaluate rhs: $rhs = ${rhs.evaluate()}")
